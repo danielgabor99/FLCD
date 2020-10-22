@@ -1,0 +1,8 @@
+int a 8 2 4 1 2 4
+int min 999
+loop i is 0 a size
+    if a of i small min
+        min a of i
+    close
+close
+print min

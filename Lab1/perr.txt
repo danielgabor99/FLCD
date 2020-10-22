@@ -1,0 +1,4 @@
+int a[1, 3, 5, 7, 9]
+loop i is 0
+    a[i] is -1
+close
