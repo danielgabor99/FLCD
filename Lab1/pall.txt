@@ -1,0 +1,36 @@
+**p1
+
+a -> 0
+b -> 1
+n -> 100
+loop i->0; i smaller 100; i->i plus 1 go
+    next->a plus b
+    a->b
+    b->next
+close
+print a
+
+**p2
+a -> [8 2 4 1 2 4]
+min -> 999
+loop i->0;i smaller a.size();i->i plus 1 go
+    if a[i] smaller min go
+        min->a[i]
+    close
+close
+print min
+
+**p3
+a -> [1 2 3 4 5 6]
+b
+loop i->0;i smaller a.size(); i-> i plus 1 go
+    if a[i] modulo 2 equals 0 go
+        b.add(a[i]) 
+    close
+close
+
+**p1err
+int a->*
+loop i is 0
+    a[i] is -1
+close

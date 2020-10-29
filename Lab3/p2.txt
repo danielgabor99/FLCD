@@ -1,4 +1,4 @@
-a -> [8 2 4 1 2 4]
+a -> [ 8 2 4 1 2 4 ]
 min -> 999
 loop i->0;i smaller a.size();i->i plus 1 go
     if a[i] smaller min go
@@ -6,3 +6,6 @@ loop i->0;i smaller a.size();i->i plus 1 go
     close
 close
 print min
+[
+
+]

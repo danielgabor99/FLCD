@@ -1,1 +1,2 @@
-nclude<bits/stdc++.h> 
+
+		return c%size;

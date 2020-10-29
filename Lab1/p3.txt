@@ -1,7 +1,7 @@
-int a 1 2 3 4 5 6
-int b
-loop i is 0 a size
-    if a of i modulo 2 0
-        b add a of i
+a -> [1 2 3 4 5 6]
+b
+loop i->0;i smaller a.size(); i-> i plus 1 go
+    if a[i] modulo 2 equals 0 go
+        b.add(a[i]) 
     close
 close

@@ -1,6 +1,7 @@
 a -> 0
 b -> 1
 n -> 100
+if i smaller a go
 loop i->0; i smaller 100; i->i plus 1 go
     next->a plus b
     a->b
