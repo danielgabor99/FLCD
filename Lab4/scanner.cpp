@@ -44,10 +44,10 @@ int main(){
             {
                 if((*it)[0]=="loop")
                     if(regex_match(line,regloop)==0)
-                        cout<<"2i error on line "<<count<<endl;
+                        cout<<"loop error on line "<<count<<endl;
                 if((*it)[0]=="if")
                     if(regex_match(line,regif)==0)
-                        cout<<"01 error on line "<<count<<endl;
+                        cout<<"if error on line "<<count<<endl;
                 if((*it)[0]=="(")
                     if(regex_match(line,regpara)==0)
                         cout<<"( error on line "<<count<<endl;
@@ -61,7 +61,7 @@ int main(){
                 pif.close();
                 pif.open("pif.txt", ios::in | ios::out | ios::app);
                     
-                pif<<(*it)[0]<<string(10-(*it)[0].str().size(), ' ' )<<-1<<"\n";
+                pif<<(*it)[0]<<string(10-(*it)[0].str().size(), ' ' )<<"0"<<"\n";
                 
                 
             }
