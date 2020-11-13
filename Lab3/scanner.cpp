@@ -19,7 +19,7 @@ int main(){
     ifstream myfile,token;
     fstream pif;
     vector<string> tokenArray;
-    myfile.open("perr.txt");
+    myfile.open("p1.txt");
     token.open("token.txt");
     pif.open("pif.txt", ios::in | ios::out | ios::app);
     int ok;
@@ -44,10 +44,10 @@ int main(){
             {
                 if((*it)[0]=="loop")
                     if(regex_match(line,regloop)==0)
-                        cout<<"2i error on line "<<count<<endl;
+                        cout<<"loop error on line "<<count<<endl;
                 if((*it)[0]=="if")
                     if(regex_match(line,regif)==0)
-                        cout<<"01 error on line "<<count<<endl;
+                        cout<<"if error on line "<<count<<endl;
                 if((*it)[0]=="(")
                     if(regex_match(line,regpara)==0)
                         cout<<"( error on line "<<count<<endl;
