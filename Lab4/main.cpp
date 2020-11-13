@@ -49,5 +49,14 @@ void menu(Automata automata){
 int main(){
     Automata a;
     a.readFiniteAutomata();
+    bool t=a.isDeterministic();
+    if(t==1)
+    {
+        string c;
+        cin>>c;
+        a.checkSequence(c);
+        
+    }
+        
     menu(a);
 }

@@ -63,5 +63,49 @@ class Automata{
             transitions.push_back(t);
         }
     }
+    bool isDeterministic(){
+        for(int i=0;i<transitions.size();i++)
+            for(int j=i+1;j<transitions.size();j++)
+                if(transitions[i].initialState==transitions[j].initialState && transitions[i].literal==transitions[j].literal)
+                    return false;
+        return true;
+    }
+
+    void checkSequence(string sequence){
+        string sq="";
+        sq+=sequence[0];
+        string nextState;
+        for(Transition tr:this->transitions)
+            {
+                if(tr.initialState==this->initialState&&sq==tr.literal)
+                {
+                    nextState=tr.next;
+                    break;
+                }
+            }
+        
+        for(int i=1;i<sequence.size();i++)
+        {   
+            sq="";
+            sq+=sequence[i];
+            for (Transition tr:this->transitions)
+                if(tr.initialState==nextState&&sq==tr.literal)
+                {
+                    nextState=tr.next;
+                    break;
+                }
+            
+        }
+        for(string s :this->finalStates)
+        {
+            if(s==nextState)
+                {
+                    cout<<"Good sequence\n";
+                    return;
+                }
+        }
+        cout<<"Bad sequence\n";
+
+    }
 
 };
