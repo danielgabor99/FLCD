@@ -76,14 +76,11 @@ class Automata{
         sq+=sequence[0];
         string nextState;
         for(Transition tr:this->transitions)
-            {
                 if(tr.initialState==this->initialState&&sq==tr.literal)
                 {
                     nextState=tr.next;
                     break;
                 }
-            }
-        
         for(int i=1;i<sequence.size();i++)
         {   
             sq="";
@@ -97,15 +94,12 @@ class Automata{
             
         }
         for(string s :this->finalStates)
-        {
             if(s==nextState)
                 {
                     cout<<"Good sequence\n";
                     return;
                 }
-        }
         cout<<"Bad sequence\n";
-
     }
 
 };
