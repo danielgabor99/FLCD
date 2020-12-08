@@ -1,5 +1,0 @@
-int a[1, 3, 5, 7, 9
-loop i->0
-    if a
-        a->2
-close
