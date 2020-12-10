@@ -78,12 +78,7 @@ public class Main {
                     parseWord(value);
                     break;
                 }
-                case 9 :{
-                    System.out.println("Give input:");
-                    String value=scan.next();
-                    createTable(value);
-                    break;
-                }
+
             }
             if (i == 0) {
                 break;
