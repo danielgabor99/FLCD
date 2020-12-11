@@ -39,6 +39,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);  // Create a Scanner object
         while (true) {
             int i = scan.nextInt();
+            // replace switch with function calls for each parameter, switch is a code smell
             switch (i) {
                 case 1 : {
                     displayTerminals();
@@ -80,6 +81,7 @@ public class Main {
                 }
 
             }
+            // add this to switch, redundant separate statement
             if (i == 0) {
                 break;
             }

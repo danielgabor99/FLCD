@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 
 public class Grammar {
 
+    // use semnificant names for variables
     private List<String> N;
     private List<String> E;
     private List<Pair<String, String>> P;
@@ -53,6 +54,7 @@ public class Grammar {
             E = lineSplitter(line);
             bufferedReader.readLine();
             line = bufferedReader.readLine();
+            // replace null check with predefined function from buffer reader ready
             while (line != null) {
                 List<String> tokens = Arrays.stream(line.strip()
                         .replace("->", " ")
