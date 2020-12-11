@@ -11,6 +11,7 @@ public class Parser {
 
     private final Grammar grammar;
 
+    // grammar should be passed as parameter to constructor after being instantiated outside of parser
     public Parser() {
         this.grammar = new Grammar();
     }
@@ -27,6 +28,7 @@ public class Parser {
         return grammar.getP();
     }
 
+    // should be deleted if grammar is instantiated outside of parser
     public void readGrammar(String filename) throws Exception {
         grammar.readGrammar(filename);
     }
@@ -39,6 +41,7 @@ public class Parser {
         List<Pair<String, String>> P = new ArrayList<>();
         P.add(new Pair<>(tokens.get(0), tokens.get(1)));
         int index;
+        // shouldn't this be a string? what happens to multiple characters tokens?
         char nonT;
         int size = 1;
 
@@ -154,7 +157,7 @@ public class Parser {
     }
 
     public List<String> parsingAlg(HashMap<Integer, Pair<String, HashMap<String, Integer>>>  lrTable,List<List<Pair<String, String>>> C,  String word) {
-
+        // remove comment, maybe you wnat to actually do something with the stack
         //TODO work with stack
         List<Pair<String, String>> state = C.get(0);
         List<String> alpha = new ArrayList<>();
@@ -210,6 +213,7 @@ public class Parser {
                 k++;
             }
             Pair<String, String> prod=search_prod(Integer.parseInt(production));
+            // set this to index = 1 from start, why is index++ seprataed?, can't you initialized index in for
             int index=0;
             table.add(new Pair(String.valueOf(prod.getValue().charAt(0)),new Pair(k,-1)));
             index++;
